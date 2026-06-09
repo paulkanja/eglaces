@@ -1,0 +1,59 @@
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: false;
+    prefersdark: true;
+    color-scheme: "light";
+    --color-base-100: #FFFFFF;
+    --color-base-200: #B0847F;
+    --color-base-300: #F4E2BC;
+    --color-base-content: #79330E;
+    --color-primary: #DA9F20;
+    --color-primary-content: #FFFFFF;
+    --color-secondary: #F43098;
+    --color-secondary-content: #F9E4F0;
+    --color-accent: #DA9F20;
+    --color-accent-content: #FFFFFF;
+    --color-neutral: #F4E2BC;
+    --color-neutral-content: #79330E;
+    --color-info: oklch(74% 0.16 232.661);
+    --color-info-content: oklch(29% 0.066 243.157);
+    --color-success: oklch(76% 0.177 163.223);
+    --color-success-content: oklch(37% 0.077 168.94);
+    --color-warning: oklch(82% 0.189 84.429);
+    --color-warning-content: oklch(41% 0.112 45.904);
+    --color-error: oklch(57% 0.245 27.325);
+    --filter-base-100: invert(98%) sepia(0%) saturate(0%)
+        hue-rotate(41deg) brightness(109%) contrast(103%);
+    --filter-base-200: invert(56%) sepia(17%) saturate(657%)
+        hue-rotate(318deg) brightness(98%) contrast(79%);
+    --filter-base-300: invert(91%) sepia(28%) saturate(401%)
+        hue-rotate(329deg) brightness(102%) contrast(91%);
+    --filter-base-content: invert(19%) sepia(89%) saturate(1093%)
+        hue-rotate(353deg) brightness(92%) contrast(94%);
+    --filter-primary: invert(65%) sepia(55%) saturate(583%)
+        hue-rotate(2deg) brightness(88%) contrast(98%);
+    --filter-primary-content: invert(98%) sepia(0%) saturate(0%)
+        hue-rotate(41deg) brightness(109%) contrast(103%);
+    --filter-secondary: invert(48%) sepia(82%) saturate(6299%)
+        hue-rotate(309deg) brightness(99%) contrast(94%);
+    --filter-secondary-content: invert(85%) sepia(7%) saturate(333%)
+        hue-rotate(273deg) brightness(103%) contrast(106%);
+    --filter-accent: invert(81%) sepia(49%) saturate(2396%)
+        hue-rotate(344deg) brightness(90%) contrast(89%);
+    --filter-accent-content: invert(98%) sepia(0%) saturate(0%)
+        hue-rotate(41deg) brightness(109%) contrast(103%);
+    --filter-neutral: invert(91%) sepia(28%) saturate(401%)
+        hue-rotate(329deg) brightness(102%) contrast(91%);
+    --filter-neutral-content: invert(19%) sepia(89%) saturate(1093%)
+        hue-rotate(353deg) brightness(92%) contrast(94%);
+    --color-error-content: oklch(27% 0.105 12.094);
+    --radius-selector: 0.5rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}

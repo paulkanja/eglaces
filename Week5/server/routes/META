@@ -1,0 +1,11 @@
+import user from "./user.js"
+import session from "./session.js"
+import product from "./product.js"
+import resource from "./resource.js"
+
+export default {
+    user,
+    session,
+    product,
+    resource,
+}

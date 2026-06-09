@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@import "./themes/light.css";
+@plugin "daisyui/theme" {
+  default: true;
+}
+
+@layer base {
+    img.fill-base-100          { filter: brightness(0) saturate(100%) var(--filter-base-100); }
+    img.fill-base-200          { filter: brightness(0) saturate(100%) var(--filter-base-200); }
+    img.fill-base-300          { filter: brightness(0) saturate(100%) var(--filter-base-300); }
+    img.fill-base-content      { filter: brightness(0) saturate(100%) var(--filter-base-content); }
+    img.fill-primary           { filter: brightness(0) saturate(100%) var(--filter-primary); }
+    img.fill-primary-content   { filter: brightness(0) saturate(100%) var(--filter-primary-content); }
+    img.fill-secondary         { filter: brightness(0) saturate(100%) var(--filter-secondary); }
+    img.fill-secondary-content { filter: brightness(0) saturate(100%) var(--filter-secondary-content); }
+    img.fill-accent            { filter: brightness(0) saturate(100%) var(--filter-accent); }
+    img.fill-accent-content    { filter: brightness(0) saturate(100%) var(--filter-accent-content); }
+    img.fill-neutral           { filter: brightness(0) saturate(100%) var(--filter-neutral); }
+    img.fill-neutral-content   { filter: brightness(0) saturate(100%) var(--filter-neutral-content); }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+main {
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    position: fixed;
+}
+
+*[style*="cursor: wait"] input,
+*[style*="cursor: wait"] button {
+    cursor: wait;
+}

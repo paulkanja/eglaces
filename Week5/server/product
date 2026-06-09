@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+if [ -z "$PORT" ] ; then
+    PORT=5050
+fi
+if [ -z "$SERVER" ] ; then
+    SERVER="http://localhost:$PORT"
+fi
+API="api/product"
+
+if [[ "$1" == "add" ]] ; then
+    name="$(printf "$2" | jq -sRr @uri)"
+    price="$(printf "$3" | jq -sRr @uri)"
+    imgfile="$4"
+    if ! [ -e "$imgfile" ] ; then
+        >&2 echo "Image file '$imgfile' does not exist"
+        exit 1
+    fi
+    curl -sS \
+        -X POST \
+        -F "file=@$imgfile" \
+        --max-time 600 \
+        --connect-timeout 60 \
+        --ignore-content-length \
+       "$SERVER/$API/$name@$price"
+    echo
+fi
+
+if [[ "$1" == "update" ]] ; then
+    id="$2"
+    shift 2
+    updates="$@"
+    curl -sS \
+        -X PUT \
+        -H 'Content-Type: application/json' \
+        -d "$updates" \
+        "$SERVER/$API/$id"
+fi
+
+if [[ "$1" == "remove" ]] ; then
+    id="$2"
+    curl -sS \
+        -X DELETE \
+        "$SERVER/$API/$id"
+fi
